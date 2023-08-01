@@ -1,0 +1,13 @@
+FUNCTION is_palandrom(word : STRING; n,i : INTEGER; palandrom:BOOLEAN) : BOOLEAN
+VAR
+BEGIN
+   IF (i<n-1 AND word[i]==word[n-1]) THEN
+    palandrom:=is_palandrom(word,n-1,i+1)
+   ELSE_IF (n-1==i)THEN
+   palandrom := TRUE 
+   RETURN palandrom
+    ELSE 
+   palandrom := TRUE
+    RETURN palandrom
+
+END
